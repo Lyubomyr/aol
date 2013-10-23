@@ -15,9 +15,12 @@ group :assets do
   gem 'uglifier',                 '~> 1.0.3'
 end
 
+group :production do
+  # gem 'pg'
+end
+
 group :development, :test do
-  gem 'sqlite3',                  '~> 1.3.8'
-  # gem 'mysql2',                   '~> 0.3.13'
+  gem 'mysql2',                   '~> 0.3.13'
   gem 'rdoc',                     '~> 3.12.2'
   gem 'rspec-rails',              '~> 2.14.0'
   gem 'mocha',                    '~> 0.14.0', :require => false
@@ -25,4 +28,8 @@ group :development, :test do
   # gem "spring",                 '~> 0.0.11'
   # gem 'debugger', :require => 'ruby-debug', :platforms => :mri_19
   # gem 'ruby-debug', :platforms => :mri_18
+end
+
+group :test do 
+  gem 'sqlite3',                  '~> 1.3.8'
 end
